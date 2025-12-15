@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Hero from "@/components/Hero";
 import {
   Navbar,
@@ -10,9 +11,10 @@ import {
   MobileNavMenu,
   MobileNavToggle,
   NavbarLogo,
-  NavbarButton,
   NavbarThemeToggle,
 } from "@/components/ui/resizable-navbar";
+import MagicButton from "@/components/ui/MagicButton";
+import { IconCalendar } from "@tabler/icons-react";
 import { navItems } from "@/data/navbar";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 import { useState } from "react";
@@ -36,9 +38,15 @@ export default function Home() {
             <NavItems items={navItems} />
             <div className="flex items-center gap-2">
               <NavbarThemeToggle />
-              <NavbarButton href="/#contact" variant="dark">
-                Rendez-vous
-              </NavbarButton>
+              <Link href="/#contact">
+                <MagicButton
+                  title="Rendez-vous"
+                  icon={<IconCalendar size={20} />}
+                  position="right"
+                  className="md:w-auto h-10"
+                  otherClasses="!px-4 !text-sm !font-bold"
+                />
+              </Link>
             </div>
           </NavBody>
           <MobileNav>

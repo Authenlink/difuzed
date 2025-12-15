@@ -29,15 +29,15 @@ const Hero = () => {
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
-          fill="oklch(var(--primary))"
+          fill="white"
         />
         <Spotlight
-          className="h-[70vh] w-[50vw] top-10 left-full"
-          fill="oklch(var(--primary))"
+          className="h-[80vh] w-[50vw] top-10 left-full"
+          fill="red"
         />
         <Spotlight
           className="left-80 top-28 h-[80vh] w-[50vw]"
-          fill="oklch(var(--accent))"
+          fill="purple"
         />
       </div>
 

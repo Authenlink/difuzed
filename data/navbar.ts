@@ -1,6 +1,5 @@
 export const navItems = [
   { name: "Solutions", link: "#features" },
-  { name: "Plateformes", link: "#documentation" },
   { name: "Méthodes", link: "#Collaboration" },
   {
     name: "Docs",

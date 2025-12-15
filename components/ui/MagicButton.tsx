@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import React from "react";
 
 /**
@@ -13,16 +14,21 @@ const MagicButton = ({
   position,
   handleClick,
   otherClasses,
+  className,
 }: {
   title: string;
   icon: React.ReactNode;
   position: string;
   handleClick?: () => void;
   otherClasses?: string;
+  className?: string;
 }) => {
   return (
     <button
-      className="relative inline-flex h-12 w-full md:w-60 overflow-hidden rounded-lg p-[1px] focus:outline-none"
+      className={cn(
+        "relative inline-flex h-12 w-full md:w-60 overflow-hidden rounded-lg p-[1px] focus:outline-none",
+        className
+      )}
       onClick={handleClick}
     >
       <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#fb2c36_0%,#b91c1c_50%,#fb2c36_100%)]" />
