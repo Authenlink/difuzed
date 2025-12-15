@@ -1,5 +1,9 @@
 export const navItems = [
-  { name: "Services", link: "#services" },
-  { name: "Méthode", link: "#Collaboration" },
-  { name: "Docs", link: "https://docs.authenlink.com" },
+  { name: "Solutions", link: "#features" },
+  { name: "Plateformes", link: "#documentation" },
+  { name: "Méthodes", link: "#Collaboration" },
+  {
+    name: "Docs",
+    link: "https://docs.authenlink.com/docs/authenlink/nos-services#geo-generative-engine-optimization",
+  },
 ];

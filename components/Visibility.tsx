@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Visibility = () => {
   return (
-    <div className="w-full pt-10 pb-20 mb-10 px-4">
+    <div className="w-full pt-20 pb-20 mb-10 px-4">
       <h2 className="text-center text-4xl font-bold text-foreground mb-12 max-w-4xl mx-auto">
         <span className="text-primary">Trackez</span> et{" "}
         <span className="text-primary">Optimisez</span> votre visibilité sur les
@@ -28,7 +28,7 @@ const Visibility = () => {
             </p>
           </div>
           <Image
-            src="/blog.png"
+            src="/blogseo.png"
             width={500}
             height={500}
             alt="SEO Dashboard"

@@ -15,7 +15,10 @@ import {
 
 const Features = () => {
   return (
-    <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 pb-20">
+    <div
+      id="features"
+      className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 pb-20"
+    >
       <div className="text-center mb-10">
         <h2 className="text-3xl md:text-5xl font-bold text-foreground">
           Nos Solutions <span className="text-primary">GEO</span>

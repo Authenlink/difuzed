@@ -1,5 +1,6 @@
 import { FlipWords } from "./ui/flip-words";
 import { Spotlight } from "./ui/spotlight";
+import { ParticlesBackground } from "./ui/ParticlesBackground";
 import { DottedMap } from "./ui/dotted-map";
 import MagicButton from "./ui/MagicButton";
 import { IconCalendar } from "@tabler/icons-react";
@@ -21,7 +22,10 @@ const Hero = () => {
   ];
 
   return (
-    <div className="pt-20 mb-4 md:mb-16" id="acceuil">
+    <div
+      className="pt-20 mb-4 md:mb-20 relative min-h-[80vh] flex flex-col justify-center"
+      id="acceuil"
+    >
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
@@ -37,10 +41,11 @@ const Hero = () => {
         />
       </div>
 
-      <div className="h-[60vh] md:h-[65vh] w-full bg-background absolute top-10 left-0 flex items-center justify-center overflow-hidden mb-20">
-        <div className="absolute inset-0 [background-size:20px_20px] [background-image:radial-gradient(#d4d4d4_1px,transparent_1px)] dark:[background-image:radial-gradient(rgba(255,255,255,0.15)_1px,transparent_1px)]" />
-        <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
-        <div className="absolute inset-0 opacity-30">
+      <div className="absolute inset-0 w-full h-full bg-background flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 w-full h-full hidden md:block">
+          <ParticlesBackground />
+        </div>
+        <div className="absolute inset-0 w-full h-full block md:hidden opacity-30">
           <DottedMap markers={markers} />
         </div>
       </div>

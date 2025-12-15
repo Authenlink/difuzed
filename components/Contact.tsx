@@ -20,7 +20,7 @@ import MagicButtonTwo from "@/components/ui/MagicButtonTwo";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 px-6 md:px-12 lg:px-24">
+    <section id="contact" className="py-20 px-6 md:px-12 lg:px-24">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -43,7 +43,7 @@ const Contact = () => {
                   <Input
                     id="lastName"
                     placeholder="Votre nom"
-                    className="h-12"
+                    className="h-12 bg-card"
                   />
                 </div>
                 <div className="space-y-2">
@@ -51,7 +51,7 @@ const Contact = () => {
                   <Input
                     id="firstName"
                     placeholder="Votre prénom"
-                    className="h-12"
+                    className="h-12 bg-card"
                   />
                 </div>
               </div>
@@ -61,7 +61,7 @@ const Contact = () => {
                 <Input
                   id="company"
                   placeholder="Nom de votre entreprise"
-                  className="h-12"
+                  className="h-12 bg-card"
                 />
               </div>
 
@@ -71,7 +71,7 @@ const Contact = () => {
                   id="email"
                   type="email"
                   placeholder="vous@exemple.com"
-                  className="h-12"
+                  className="h-12 bg-card"
                 />
               </div>
 
@@ -82,7 +82,7 @@ const Contact = () => {
                 <Textarea
                   id="message"
                   placeholder="Décrivez votre projet ou posez-nous vos questions..."
-                  className="min-h-36 resize-none"
+                  className="min-h-36 resize-none bg-card"
                 />
               </div>
 

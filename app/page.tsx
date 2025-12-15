@@ -82,6 +82,7 @@ export default function Home() {
           <Hero />
           <Visibility />
           <Features />
+          <Experience />
           <Contact />
           <Footer />
         </div>
