@@ -25,12 +25,14 @@ import Footer from "@/components/Footer";
 import Documentation from "@/components/Documentation";
 import LLMFloatingDock from "@/components/LLMFloatingDock";
 import Experience from "@/components/WorkWithUs";
+import PageSchema from "@/components/PageSchema";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <main className="relative bg-background flex justify-center items-center flex-col overflow-hidden mx-auto px-2">
+      <PageSchema />
       <div className="w-full">
         <Navbar>
           <NavBody>

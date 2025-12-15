@@ -43,7 +43,7 @@ const Contact = () => {
                   <Input
                     id="lastName"
                     placeholder="Votre nom"
-                    className="h-12 bg-card"
+                    className="h-12 bg-card dark:bg-card"
                   />
                 </div>
                 <div className="space-y-2">
@@ -51,7 +51,7 @@ const Contact = () => {
                   <Input
                     id="firstName"
                     placeholder="Votre prénom"
-                    className="h-12 bg-card"
+                    className="h-12 bg-card dark:bg-card"
                   />
                 </div>
               </div>
@@ -61,7 +61,7 @@ const Contact = () => {
                 <Input
                   id="company"
                   placeholder="Nom de votre entreprise"
-                  className="h-12 bg-card"
+                  className="h-12 bg-card dark:bg-card"
                 />
               </div>
 
@@ -71,7 +71,7 @@ const Contact = () => {
                   id="email"
                   type="email"
                   placeholder="vous@exemple.com"
-                  className="h-12 bg-card"
+                  className="h-12 bg-card dark:bg-card"
                 />
               </div>
 
@@ -82,7 +82,7 @@ const Contact = () => {
                 <Textarea
                   id="message"
                   placeholder="Décrivez votre projet ou posez-nous vos questions..."
-                  className="min-h-36 resize-none bg-card"
+                  className="min-h-36 resize-none bg-card dark:bg-card"
                 />
               </div>
 
@@ -101,7 +101,7 @@ const Contact = () => {
             <Card className="border-border/50 hover:border-primary/30 transition-colors duration-300">
               <CardHeader>
                 <div className="flex items-center gap-4">
-                  <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-card">
                     <IconMail className="w-6 h-6 text-primary" />
                   </div>
                   <div>
@@ -127,7 +127,7 @@ const Contact = () => {
             <Card className="border-border/50 hover:border-primary/30 transition-colors duration-300">
               <CardHeader>
                 <div className="flex items-center gap-4">
-                  <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-card">
                     <IconPhone className="w-6 h-6 text-primary" />
                   </div>
                   <div>

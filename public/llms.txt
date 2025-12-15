@@ -1,0 +1,43 @@
+# llms.txt for difuzed.com
+# This file helps LLMs understand the structure and important content of our website
+
+# Main pages
+/
+/about
+/contact
+/features
+/documentation
+
+# Key sections (anchors)
+/#acceuil
+/#features
+/#Collaboration
+/#contact
+
+# Documentation and resources
+https://docs.authenlink.com/docs/authenlink/nos-services#geo-generative-engine-optimization
+
+# Sitemap
+/sitemap.xml
+
+# Contact
+Contact: https://difuzed.com/#contact
+
+# About
+About: DiFuzed est une agence spécialisée en Generative Engine Optimization (GEO). Nous aidons les entreprises à devenir la référence de leur secteur sur les moteurs de recherche IA comme ChatGPT, Claude, Gemini, Grok, Perplexity, Mistral et Llama.
+
+# Services
+Services:
+- Audit IA et benchmark de position actuelle
+- Analyse des concurrents
+- Documentation technique structurée optimisée pour les LLM
+- Configuration llms.txt et robots.txt
+- Intégration Schema.org / JSON-LD
+- FAQ conversationnelles
+- Formatage de contenu citable
+- Renforcement d'autorité média
+- Suivi et reporting continu
+
+# Keywords
+Keywords: GEO, Generative Engine Optimization, SEO IA, optimisation pour LLM, ChatGPT, Claude, Gemini, documentation technique, Schema.org, llms.txt
+

@@ -1,99 +1,109 @@
+"use client";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 import { FlipWords } from "./ui/flip-words";
-import { Spotlight } from "./ui/spotlight";
-import { ParticlesBackground } from "./ui/ParticlesBackground";
-import { DottedMap } from "./ui/dotted-map";
+import { ContainerScroll } from "./ui/container-scroll-animation";
+import Image from "next/image";
+import { Spotlight } from "./ui/spotlight-new";
 import MagicButton from "./ui/MagicButton";
 import { IconCalendar } from "@tabler/icons-react";
 
 const Hero = () => {
-  const markers = [
-    { lat: 40.7128, lng: -74.006, size: 0.3 }, // New York
-    { lat: 34.0522, lng: -118.2437, size: 0.3 }, // Los Angeles
-    { lat: 51.5074, lng: -0.1278, size: 0.3 }, // London
-    { lat: -33.8688, lng: 151.2093, size: 0.3 }, // Sydney
-    { lat: 48.8566, lng: 2.3522, size: 0.3 }, // Paris
-    { lat: 35.6762, lng: 139.6503, size: 0.3 }, // Tokyo
-    { lat: 55.7558, lng: 37.6176, size: 0.3 }, // Moscow
-    { lat: 39.9042, lng: 116.4074, size: 0.3 }, // Beijing
-    { lat: 28.6139, lng: 77.209, size: 0.3 }, // New Delhi
-    { lat: -23.5505, lng: -46.6333, size: 0.3 }, // São Paulo
-    { lat: 1.3521, lng: 103.8198, size: 0.3 }, // Singapore
-    { lat: 25.2048, lng: 55.2708, size: 0.3 }, // Dubai
-  ];
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    // eslint-disable-next-line
+    setMounted(true);
+  }, []);
 
   return (
     <div
       className="pt-20 mb-4 md:mb-20 relative min-h-[80vh] flex flex-col justify-center"
       id="acceuil"
     >
-      <div>
-        <Spotlight
-          className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
-          fill="white"
-        />
-        <Spotlight
-          className="h-[80vh] w-[50vw] top-10 left-full"
-          fill="red"
-        />
-        <Spotlight
-          className="left-80 top-28 h-[80vh] w-[50vw]"
-          fill="purple"
-        />
+      <Spotlight
+        gradientFirst={
+          mounted && resolvedTheme === "white"
+            ? "radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(0, 0%, 85%, .08) 0, hsla(0, 0%, 55%, .02) 50%, hsla(0, 0%, 45%, 0) 80%)"
+            : "radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(0, 100%, 85%, .16) 0, hsla(0, 100%, 55%, .04) 50%, hsla(0, 100%, 45%, 0) 80%)"
+        }
+        gradientSecond={
+          mounted && resolvedTheme === "white"
+            ? "radial-gradient(50% 50% at 50% 50%, hsla(0, 0%, 85%, .06) 0, hsla(0, 0%, 55%, .02) 80%, transparent 100%)"
+            : "radial-gradient(50% 50% at 50% 50%, hsla(0, 100%, 85%, .12) 0, hsla(0, 100%, 55%, .04) 80%, transparent 100%)"
+        }
+        gradientThird={
+          mounted && resolvedTheme === "white"
+            ? "radial-gradient(50% 50% at 50% 50%, hsla(0, 0%, 85%, .04) 0, hsla(0, 0%, 45%, .02) 80%, transparent 100%)"
+            : "radial-gradient(50% 50% at 50% 50%, hsla(0, 100%, 85%, .08) 0, hsla(0, 100%, 45%, .04) 80%, transparent 100%)"
+        }
+      />
+
+      <div className="h-[60vh] md:h-[65vh] w-full bg-background absolute top-10 left-0 flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 [background-size:20px_20px] [background-image:radial-gradient(#d4d4d4_1px,transparent_1px)] dark:[background-image:radial-gradient(rgba(255,255,255,0.15)_1px,transparent_1px)]" />
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
       </div>
 
-      <div className="absolute inset-0 w-full h-full bg-background flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 w-full h-full hidden md:block">
-          <ParticlesBackground />
-        </div>
-        <div className="absolute inset-0 w-full h-full block md:hidden opacity-30">
-          <DottedMap markers={markers} />
-        </div>
-      </div>
+      <ContainerScroll
+        titleComponent={
+          <div className="flex justify-center relative my-20 z-10">
+            <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center text-center">
+              <p className="uppercase tracking-widest text-md max-w-80 mb-5">
+                Generative Engine Optimization
+              </p>
 
-      <div className="flex justify-center relative my-20 z-10">
-        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center text-center">
-          <p className="uppercase tracking-widest text-md max-w-80 mb-5">
-            Generative Engine Optimization
-          </p>
+              <div className="text-3xl md:text-4xl lg:text-6xl leading-normal font-black text-foreground">
+                Soyez LA première source citée par{" "}
+                <FlipWords
+                  words={[
+                    "ChatGPT",
+                    "Claude",
+                    "Gemini",
+                    "Grok",
+                    "Perplexity",
+                    "Mistral",
+                    "Llama",
+                  ]}
+                  duration={3000}
+                  className="text-primary leading-tight"
+                />
+              </div>
 
-          <div className="text-3xl md:text-4xl lg:text-6xl leading-normal font-black text-foreground">
-            Soyez LA première source citée par{" "}
-            <FlipWords
-              words={[
-                "ChatGPT",
-                "Claude",
-                "Gemini",
-                "Grok",
-                "Perplexity",
-                "Mistral",
-                "Llama",
-              ]}
-              duration={3000}
-              className="text-primary leading-tight"
-            />
+              {/* Bouton Prendre rendez-vous */}
+              <p className="max-w-2xl text-lg leading-8 text-muted-foreground mt-6">
+                Audit IA • Documentation technique optimisée • Présence externe
+                stratégique • Monitoring continu
+              </p>
+
+              <div className="lg:mt-0 mt-4 min-w-[230px] pt-10">
+                <MagicButton
+                  title="Prendre rendez-vous"
+                  icon={<IconCalendar className="w-4 h-4" />}
+                  position="right"
+                  handleClick={() => {
+                    // Handle appointment booking logic here
+                    document
+                      .getElementById("contact")
+                      ?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                />
+              </div>
+            </div>
           </div>
-
-          {/* Bouton Prendre rendez-vous */}
-          <p className="max-w-2xl text-lg leading-8 text-muted-foreground mt-6">
-            Audit IA • Documentation technique optimisée • Présence externe
-            stratégique • Monitoring continu
-          </p>
-
-          <div className="lg:mt-0 mt-4 min-w-[230px] pt-10">
-            <MagicButton
-              title="Prendre rendez-vous"
-              icon={<IconCalendar className="w-4 h-4" />}
-              position="right"
-              handleClick={() => {
-                // Handle appointment booking logic here
-                document
-                  .getElementById("contact")
-                  ?.scrollIntoView({ behavior: "smooth" });
-              }}
-            />
-          </div>
-        </div>
-      </div>
+        }
+      >
+        <Image
+          src={
+            mounted && resolvedTheme === "light" ? "/docwhite.png" : "/doc.png"
+          }
+          alt="hero"
+          height={720}
+          width={1400}
+          className="mx-auto rounded-2xl object-cover h-full object-left-top draggable-false"
+          draggable={false}
+        />
+      </ContainerScroll>
     </div>
   );
 };
