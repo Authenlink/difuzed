@@ -26,9 +26,9 @@ export default function Meeting() {
           if (ar[0] === L) {
             const api = function () {
               p(api, arguments);
-            };
+            } as any;
             const namespace = ar[1];
-            api.q = api.q || [];
+            (api as any).q = (api as any).q || [];
             if (typeof namespace === "string") {
               cal.ns[namespace] = cal.ns[namespace] || api;
               p(cal.ns[namespace], ar);
