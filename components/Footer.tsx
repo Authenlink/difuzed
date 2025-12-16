@@ -1,7 +1,11 @@
+"use client";
+
 import { FaCalendarAlt } from "react-icons/fa";
 import MagicButton from "./ui/MagicButton";
+import { useRouter } from "next/navigation";
 
 const Footer = () => {
+  const router = useRouter();
   return (
     <footer className="w-full pt-20 pb-1" id="Rendez-vous">
       <div className="flex flex-col items-center">
@@ -16,16 +20,12 @@ const Footer = () => {
           souhaiteriez mettre en place.
         </p>
 
-        {/* Lien vers la section "Rendez-vous" */}
         <MagicButton
           title="Prendre rendez-vous"
           icon={<FaCalendarAlt />}
           position="right"
           handleClick={() => {
-            const element = document.getElementById("contact");
-            if (element) {
-              element.scrollIntoView({ behavior: "smooth" });
-            }
+            router.push("/contact");
           }}
         />
       </div>

@@ -17,11 +17,11 @@ export default function ContactHero() {
         mainCircleSize={210}
         numCircles={8}
         className="z-0"
-        circleClassName="bg-primary border-primary"
+        circleClassName="bg-primary border-primary pt-20"
       />
 
       <div className="z-10 flex flex-col items-center text-center px-4 mt-10">
-        <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 dark:from-neutral-50 dark:to-neutral-400 py-4">
+        <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-foreground  py-4">
           Contactez-nous
         </h1>
         <p className="text-neutral-500 max-w-lg mx-auto my-2 text-sm md:text-base">

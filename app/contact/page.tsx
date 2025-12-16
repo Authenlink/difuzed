@@ -21,9 +21,20 @@ import MagicButton from "@/components/ui/MagicButton";
 import { IconCalendar } from "@tabler/icons-react";
 import { navItems } from "@/data/navbar";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function ContactPage() {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
+
+  const handleNavClick = (link: string) => {
+    setIsOpen(false);
+    // Si le lien est une ancre (commence par #), rediriger vers la page d'accueil avec l'ancre
+    if (link.startsWith("#")) {
+      router.push(`/${link}`);
+    }
+    // Si c'est un lien externe, laisser le comportement par défaut du navigateur
+  };
 
   return (
     <main className="relative bg-background flex justify-center items-center flex-col overflow-hidden mx-auto px-2">
@@ -57,16 +68,37 @@ export default function ContactPage() {
               </div>
             </MobileNavHeader>
             <MobileNavMenu isOpen={isOpen} onClose={() => setIsOpen(false)}>
-              {navItems.map((item, idx) => (
-                <a
-                  key={idx}
-                  href={item.link}
-                  className="text-neutral-600 dark:text-neutral-600"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </a>
-              ))}
+              {navItems.map((item, idx) => {
+                const isExternalLink = item.link.startsWith("http");
+                const isAnchor = item.link.startsWith("#");
+
+                if (isAnchor) {
+                  return (
+                    <button
+                      key={idx}
+                      onClick={() => handleNavClick(item.link)}
+                      className="text-neutral-600 dark:text-neutral-600 text-left"
+                    >
+                      {item.name}
+                    </button>
+                  );
+                }
+
+                return (
+                  <a
+                    key={idx}
+                    href={item.link}
+                    className="text-neutral-600 dark:text-neutral-600"
+                    onClick={() => setIsOpen(false)}
+                    {...(isExternalLink && {
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                    })}
+                  >
+                    {item.name}
+                  </a>
+                );
+              })}
             </MobileNavMenu>
           </MobileNav>
         </Navbar>

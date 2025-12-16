@@ -17,8 +17,11 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import MagicButtonTwo from "@/components/ui/MagicButtonTwo";
+import { useRouter } from "next/navigation";
 
 const Contact = () => {
+  const router = useRouter();
+
   return (
     <section id="contact" className="py-20 px-6 md:px-12 lg:px-24">
       <div className="max-w-7xl mx-auto">
@@ -148,7 +151,7 @@ const Contact = () => {
                   icon={<IconCalendar className="w-4 h-4" />}
                   position="right"
                   handleClick={() => {
-                    // Handle calendar booking logic here
+                    router.push("/contact");
                   }}
                   otherClasses="w-full"
                 />

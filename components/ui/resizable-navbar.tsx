@@ -12,6 +12,7 @@ import React, { useRef, useState } from "react";
 import Image from "next/image";
 import { ThemeToggle } from "../ThemeToggle";
 import Link from "next/link";
+import { useRouter, usePathname } from "next/navigation";
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -48,7 +49,7 @@ interface MobileNavMenuProps {
   children: React.ReactNode;
   className?: string;
   isOpen: boolean;
-  onClose: () => void;
+  onClose?: () => void;
 }
 
 export const Navbar = ({ children, className }: NavbarProps) => {
@@ -116,6 +117,21 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
 
 export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
   const [hovered, setHovered] = useState<number | null>(null);
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const handleClick = (link: string, e: React.MouseEvent) => {
+    if (onItemClick) {
+      onItemClick();
+    }
+
+    // Si le lien est une ancre (commence par #) et qu'on n'est pas sur la page d'accueil
+    if (link.startsWith("#") && pathname !== "/") {
+      e.preventDefault();
+      router.push(`/${link}`);
+    }
+    // Si c'est un lien externe, laisser le comportement par défaut
+  };
 
   return (
     <motion.div
@@ -125,23 +141,52 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
         className
       )}
     >
-      {items.map((item, idx) => (
-        <a
-          onMouseEnter={() => setHovered(idx)}
-          onClick={onItemClick}
-          className="relative px-4 py-2 text-muted-foreground hover:text-foreground"
-          key={`link-${idx}`}
-          href={item.link}
-        >
-          {hovered === idx && (
-            <motion.div
-              layoutId="hovered"
-              className="absolute inset-0 h-full w-full rounded-full bg-accent"
-            />
-          )}
-          <span className="relative z-20">{item.name}</span>
-        </a>
-      ))}
+      {items.map((item, idx) => {
+        const isExternalLink = item.link.startsWith("http");
+        const isAnchor = item.link.startsWith("#");
+        const shouldUseRouter = isAnchor && pathname !== "/";
+
+        if (shouldUseRouter) {
+          return (
+            <button
+              key={`link-${idx}`}
+              onMouseEnter={() => setHovered(idx)}
+              onClick={(e) => handleClick(item.link, e)}
+              className="relative px-4 py-2 text-muted-foreground hover:text-foreground"
+            >
+              {hovered === idx && (
+                <motion.div
+                  layoutId="hovered"
+                  className="absolute inset-0 h-full w-full rounded-full bg-accent"
+                />
+              )}
+              <span className="relative z-20">{item.name}</span>
+            </button>
+          );
+        }
+
+        return (
+          <a
+            key={`link-${idx}`}
+            onMouseEnter={() => setHovered(idx)}
+            onClick={handleClick.bind(null, item.link)}
+            className="relative px-4 py-2 text-muted-foreground hover:text-foreground"
+            href={item.link}
+            {...(isExternalLink && {
+              target: "_blank",
+              rel: "noopener noreferrer",
+            })}
+          >
+            {hovered === idx && (
+              <motion.div
+                layoutId="hovered"
+                className="absolute inset-0 h-full w-full rounded-full bg-accent"
+              />
+            )}
+            <span className="relative z-20">{item.name}</span>
+          </a>
+        );
+      })}
     </motion.div>
   );
 };
@@ -196,7 +241,6 @@ export const MobileNavMenu = ({
   children,
   className,
   isOpen,
-  onClose,
 }: MobileNavMenuProps) => {
   return (
     <AnimatePresence>
@@ -237,7 +281,7 @@ export const NavbarLogo = () => {
       href="/"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-foreground"
     >
-      <Image src="/logo.png" alt="logo" width={30} height={30} priority />
+      <Image src="/logo.png" alt="logo" width={36} height={36} priority />
       <span className="font-medium text-foreground">DiFuzed</span>
     </Link>
   );

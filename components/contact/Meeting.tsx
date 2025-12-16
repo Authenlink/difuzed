@@ -60,7 +60,7 @@ export default function Meeting() {
 
   return (
     <div className="w-full flex flex-col justify-center items-center py-10 bg-background">
-      <h2 className="text-3xl md:text-5xl font-bold text-foreground text-center mb-10 max-w-4xl px-4">
+      <h2 className="text-2xl md:text-4xl font-bold text-foreground text-center mb-10 max-w-4xl px-4">
         Réservez votre appel pour booster votre{" "}
         <span className="text-primary">référencement</span> grâce aux{" "}
         <span className="text-primary">meilleures pratiques</span>.
