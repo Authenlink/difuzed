@@ -7,6 +7,7 @@ import Image from "next/image";
 import { Spotlight } from "./ui/spotlight-new";
 import MagicButton from "./ui/MagicButton";
 import { IconCalendar } from "@tabler/icons-react";
+import Link from "next/link";
 
 const Hero = () => {
   const { resolvedTheme } = useTheme();
@@ -77,17 +78,13 @@ const Hero = () => {
               </p>
 
               <div className="lg:mt-0 mt-4 min-w-[230px] pt-10">
-                <MagicButton
-                  title="Prendre rendez-vous"
-                  icon={<IconCalendar className="w-4 h-4" />}
-                  position="right"
-                  handleClick={() => {
-                    // Handle appointment booking logic here
-                    document
-                      .getElementById("contact")
-                      ?.scrollIntoView({ behavior: "smooth" });
-                  }}
-                />
+                <Link href="/contact">
+                  <MagicButton
+                    title="Prendre rendez-vous"
+                    icon={<IconCalendar className="w-4 h-4" />}
+                    position="right"
+                  />
+                </Link>
               </div>
             </div>
           </div>

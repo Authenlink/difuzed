@@ -1,7 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import Hero from "@/components/Hero";
+import Meeting from "@/components/contact/Meeting";
+import ContactHero from "@/components/contact/ContactHero";
+import FAQ from "@/components/contact/FAQ";
+import Footer from "@/components/Footer";
 import {
   Navbar,
   NavBody,
@@ -13,27 +16,17 @@ import {
   NavbarLogo,
   NavbarThemeToggle,
 } from "@/components/ui/resizable-navbar";
+import { TracingBeam } from "@/components/ui/tracing-beam";
 import MagicButton from "@/components/ui/MagicButton";
 import { IconCalendar } from "@tabler/icons-react";
 import { navItems } from "@/data/navbar";
-import { TracingBeam } from "@/components/ui/tracing-beam";
 import { useState } from "react";
-import Visibility from "@/components/Visibility";
-import Features from "@/components/Features";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
-import Documentation from "@/components/Documentation";
-import LLMFloatingDock from "@/components/LLMFloatingDock";
-import Experience from "@/components/WorkWithUs";
-import PageSchema from "@/components/PageSchema";
-import FAQ from "@/components/contact/FAQ";
 
-export default function Home() {
+export default function ContactPage() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <main className="relative bg-background flex justify-center items-center flex-col overflow-hidden mx-auto px-2">
-      <PageSchema />
       <div className="w-full">
         <Navbar>
           <NavBody>
@@ -79,25 +72,21 @@ export default function Home() {
         </Navbar>
         <div className="hidden md:block">
           <TracingBeam>
-            <Hero />
-            <Visibility />
-            <Features />
-            <Documentation />
-            <Experience />
-            <Contact />
-            <FAQ />
-            <Footer />
-            <LLMFloatingDock />
+            <ContactHero />
+            <div className="pt-0">
+              <Meeting />
+              <FAQ />
+              <Footer />
+            </div>
           </TracingBeam>
         </div>
         <div className="md:hidden">
-          <Hero />
-          <Visibility />
-          <Features />
-          <Experience />
-          <Contact />
-          <FAQ />
-          <Footer />
+          <ContactHero />
+          <div className="pt-0">
+            <Meeting />
+            <FAQ />
+            <Footer />
+          </div>
         </div>
       </div>
     </main>
