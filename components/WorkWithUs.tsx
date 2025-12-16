@@ -13,7 +13,7 @@ import {
 const Experience = () => {
   return (
     <div
-      className=" max-w-7xl mx-auto flex flex-col items-center px-5 my-20 pt-20"
+      className=" max-w-7xl mx-auto flex flex-col items-center px-5 my-8 md:my-20 pt-8 md:pt-20"
       id="Collaboration"
     >
       <h2 className="text-center text-4xl font-bold text-foreground mb-8">

@@ -15,7 +15,7 @@ const Visibility = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
         {/* Card SEO - Grande gauche */}
         <WobbleCard
-          containerClassName="col-span-1 lg:col-span-2 h-full bg-blue-900 min-h-[500px] lg:min-h-[300px]"
+          containerClassName="col-span-1 lg:col-span-2 h-full bg-blue-900 min-h-[450px] lg:min-h-[280px]"
           className=""
         >
           <div className="max-w-xs">
@@ -37,7 +37,7 @@ const Visibility = () => {
         </WobbleCard>
 
         {/* Card GEO - Petite droite */}
-        <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-green-800">
+        <WobbleCard containerClassName="col-span-1 min-h-[250px] bg-green-800">
           <h2 className="max-w-80 text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
             GEO
           </h2>

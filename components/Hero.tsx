@@ -77,7 +77,7 @@ const Hero = () => {
                 stratégique • Monitoring continu
               </p>
 
-              <div className="lg:mt-0 mt-4 min-w-[230px] pt-10">
+              <div className="lg:mt-0 mt-4 min-w-[230px] pt-4 md:pt-10">
                 <Link href="/contact">
                   <MagicButton
                     title="Prendre rendez-vous"
