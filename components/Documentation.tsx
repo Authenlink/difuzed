@@ -74,6 +74,16 @@ export function Documentation() {
         </div>
       ),
     },
+    {
+      title: "Substack",
+      value: "substack",
+      content: (
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-orange-500 to-orange-700">
+          <p>Créez et monétisez votre newsletter sur Substack</p>
+          <DummyContent imageSrc="/substack.png" />
+        </div>
+      ),
+    },
   ];
 
   return (
