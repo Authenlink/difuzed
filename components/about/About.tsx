@@ -21,7 +21,7 @@ export default function About() {
     {
       title: "Innovation",
       description:
-        "Le GEO évolue chaque semaine. Nous testons en permanence les nouveaux modèles (Claude 3.5, GPT-4o, Gemini 1.5).",
+        "Le GEO évolue chaque semaine. Nous testons en permanence les nouveaux modèles (Claude 4.5, GPT-5.2, Gemini 3 pro).",
       link: "#",
     },
   ];
