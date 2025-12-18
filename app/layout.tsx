@@ -111,6 +111,80 @@ export default function RootLayout({
     },
   };
 
+  const professionalServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "DiFuzed",
+    description:
+      "Agence GEO spécialisée en Generative Engine Optimization pour optimiser votre présence sur ChatGPT, Claude, Gemini et Perplexity",
+    url: "https://www.difuzed.io",
+    logo: "https://www.difuzed.io/logo.png",
+    areaServed: {
+      "@type": "Country",
+      name: "France",
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Services GEO",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Optimisation ChatGPT",
+            description:
+              "Optimisez votre visibilité sur ChatGPT pour être cité comme source de référence dans les réponses génératives",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Optimisation Claude",
+            description:
+              "Optimisez votre présence sur Claude (Anthropic) pour améliorer vos citations dans les réponses IA",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Optimisation Gemini et Perplexity",
+            description:
+              "Développez votre visibilité sur Google Gemini et Perplexity pour maximiser vos citations par les moteurs de recherche IA",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Audit GEO",
+            description:
+              "Audit complet de votre présence actuelle sur les moteurs de recherche IA avec recommandations personnalisées",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Documentation technique optimisée",
+            description:
+              "Création et optimisation de documentation technique structurée (JSON-LD, llms.txt, schémas Schema.org) pour les LLM",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Monitoring continu",
+            description:
+              "Suivi et analyse continue de votre visibilité sur les principaux moteurs de recherche IA avec rapports détaillés",
+          },
+        },
+      ],
+    },
+  };
+
   return (
     <html lang="fr">
       <head>
@@ -124,6 +198,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(websiteSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(professionalServiceSchema),
           }}
         />
       </head>
