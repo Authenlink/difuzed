@@ -26,7 +26,7 @@ export function AboutWobbleCards() {
           src="/medium.png"
           width={500}
           height={500}
-          alt="Medium SEO article"
+          alt="Article Medium sur le SEO et Generative Engine Optimization pour améliorer la visibilité sur les LLM"
           className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl opacity-80"
         />
       </WobbleCard>
@@ -65,7 +65,7 @@ export function AboutWobbleCards() {
           src="/documentation.png"
           width={500}
           height={500}
-          alt="Documentation GEO"
+          alt="Documentation technique structurée optimisée pour les LLM avec formats JSON-LD, llms.txt et schémas structurés"
           className="absolute -right-10 md:-right-[40%] lg:-right-[10%] -bottom-10 object-contain rounded-2xl opacity-90"
         />
       </WobbleCard>

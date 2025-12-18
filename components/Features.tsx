@@ -21,11 +21,12 @@ const Features = () => {
     >
       <div className="text-center mb-10">
         <h2 className="text-3xl md:text-5xl font-bold text-foreground">
-          Nos Solutions <span className="text-primary">GEO</span>
+          Solutions <span className="text-primary">GEO</span> pour moteurs de
+          recherche IA
         </h2>
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-          Optimisez votre visibilité dans les moteurs de réponse par IA grâce à
-          notre approche complète.
+          Optimisez votre présence sur les moteurs de recherche IA et devenez la
+          référence citée par les LLM grâce au Generative Engine Optimization.
         </p>
       </div>
 
@@ -36,61 +37,61 @@ const Features = () => {
 
 const features = [
   {
-    title: "Benchmark position actuelle",
+    title: "Audit visibilité IA et benchmark GEO",
     description:
-      "Évaluation précise de votre visibilité actuelle sur les principaux moteurs de recherche et IA génératives.",
+      "Évaluation de votre position sur les moteurs de recherche IA. Analyse de 30-50 requêtes stratégiques pour optimiser votre Generative Engine Optimization.",
     icon: <IconChartBar className="w-8 h-8 text-primary" />,
   },
   {
-    title: "Analyse des concurrents",
+    title: "Analyse concurrentielle citations IA",
     description:
-      "Identification et analyse approfondie des concurrents cités à votre place pour comprendre leurs stratégies.",
+      "Identification des concurrents cités par les LLM à votre place. Analyse de leurs stratégies GEO pour comprendre leur référencement par les moteurs de recherche IA.",
     icon: <IconTrophy className="w-8 h-8 text-primary" />,
   },
   {
-    title: "Documentation structurée",
+    title: "Documentation technique optimisée LLM",
     description:
-      "Création d'une documentation technique (type docs.entreprise.com) parfaitement optimisée pour la lecture par les LLM.",
+      "Création d'une documentation structurée optimisée pour les modèles de langage. Formatage pour maximiser les citations par les LLM et améliorer votre visibilité GEO.",
     icon: <IconBook2 className="w-8 h-8 text-primary" />,
   },
   {
-    title: "Configuration Technique",
+    title: "Configuration llms.txt et robots.txt",
     description:
-      "Mise en place et optimisation des fichiers llms.txt et robots.txt pour guider efficacement les crawlers d'IA.",
+      "Optimisation des fichiers llms.txt et robots.txt pour guider les crawlers IA et améliorer l'indexation par les moteurs de recherche IA.",
     icon: <IconFileCode className="w-8 h-8 text-primary" />,
   },
   {
-    title: "Données Structurées",
+    title: "Schema.org et JSON-LD pour LLM",
     description:
-      "Intégration complète du balisage Schema.org et JSON-LD sur vos pages clés pour une compréhension sémantique maximale.",
+      "Intégration du balisage Schema.org et JSON-LD pour une meilleure compréhension sémantique par les LLM. Structuration optimisée pour le Generative Engine Optimization.",
     icon: <IconHierarchy className="w-8 h-8 text-primary" />,
   },
   {
-    title: "FAQ Conversationnelles",
+    title: "FAQ conversationnelles chatbots IA",
     description:
-      "Développement de FAQ conçues spécifiquement pour alimenter les réponses conversationnelles des chatbots.",
+      "Développement de FAQ optimisées pour alimenter les réponses des chatbots IA. Formatage pour maximiser les citations par les moteurs de recherche IA.",
     icon: <IconMessage2 className="w-8 h-8 text-primary" />,
   },
   {
-    title: "Contenu Citable",
+    title: "Contenu citable pour citations IA",
     description:
-      "Formatage stratégique de votre contenu (définitions, statistiques, frameworks) pour augmenter les chances de citation.",
+      "Formatage stratégique de votre contenu (définitions, statistiques, frameworks) pour maximiser les citations par les LLM et améliorer votre référencement GEO.",
     icon: <IconQuote className="w-8 h-8 text-primary" />,
   },
   {
-    title: "Autorité Média",
+    title: "Autorité média et présence externe",
     description:
-      "Publication d'articles sur des médias sectoriels et enrichissement de vos profils pour renforcer votre autorité en ligne.",
+      "Publication d'articles sur Medium, LinkedIn, Wikipedia pour renforcer votre autorité. Stratégie permettant aux moteurs de recherche IA de vous identifier comme référence.",
     icon: <IconNews className="w-8 h-8 text-primary" />,
   },
   {
-    title: "Suivi & Reporting",
+    title: "Monitoring citations IA et reporting GEO",
     description: (
       <ul className="list-disc list-inside space-y-1">
-        <li>Suivi mensuel des citations IA</li>
-        <li>Alertes sur évolutions</li>
-        <li>Ajustements de contenu</li>
-        <li>Reporting complet</li>
+        <li>Suivi mensuel citations moteurs de recherche IA</li>
+        <li>Alertes évolutions de position</li>
+        <li>Ajustements contenu basés données</li>
+        <li>Reporting métriques GEO</li>
       </ul>
     ),
     icon: <IconActivity className="w-8 h-8 text-primary" />,

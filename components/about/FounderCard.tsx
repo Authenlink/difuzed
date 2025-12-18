@@ -44,7 +44,7 @@ export function FounderCard() {
                 height="1000"
                 width="1000"
                 className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl border border-border/50"
-                alt="AuthenLink Website"
+                alt="Site web AuthenLink - Plateforme de création d'agents IA sur-mesure et fine-tuning de modèles"
               />
             </CardItem>
             <div className="flex justify-between items-center mt-20">
@@ -58,7 +58,7 @@ export function FounderCard() {
                 <div className="flex items-center gap-2">
                   <Image
                     src="/authenlink.png"
-                    alt="AuthenLink Logo"
+                    alt="Logo AuthenLink - Création d'agents IA personnalisés"
                     width={20}
                     height={20}
                     className="rounded-full"

@@ -31,7 +31,7 @@ const Visibility = () => {
             src="/blogseo.png"
             width={500}
             height={500}
-            alt="SEO Dashboard"
+            alt="Tableau de bord SEO avec outils alimentés par IA et workflows automatisés pour optimiser le trafic"
             className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl opacity-80"
           />
         </WobbleCard>
@@ -62,7 +62,7 @@ const Visibility = () => {
             src="/doc.png"
             width={500}
             height={500}
-            alt="Documentation GEO"
+            alt="Documentation technique structurée pour Generative Engine Optimization et visibilité totale sur les moteurs de recherche IA"
             className="absolute -right-10 md:-right-[40%] lg:-right-[10%] -bottom-10 object-contain rounded-2xl opacity-90"
           />
         </WobbleCard>

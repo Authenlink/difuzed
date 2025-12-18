@@ -1,4 +1,4 @@
-# robots.txt for difuzed.com
+# robots.txt for difuzed.io
 # Allow all search engines and AI crawlers to index the site
 
 User-agent: *
@@ -30,5 +30,5 @@ User-agent: Applebot-Extended
 Allow: /
 
 # Sitemap location
-Sitemap: https://difuzed.com/sitemap.xml
+Sitemap: https://difuzed.io/sitemap.xml
 

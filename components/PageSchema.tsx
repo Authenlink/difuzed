@@ -10,7 +10,7 @@ export default function PageSchema() {
       name: "DiFuzed - Agence GEO",
       description:
         "L'Agence GEO qui vous placera en tant que référence de votre secteur sur tous les moteurs de recherches IA",
-      url: "https://difuzed.com",
+      url: "https://difuzed.io",
       mainEntity: {
         "@type": "Service",
         name: "Generative Engine Optimization",
@@ -34,7 +34,7 @@ export default function PageSchema() {
             "@type": "ListItem",
             position: 1,
             name: "Accueil",
-            item: "https://difuzed.com",
+            item: "https://difuzed.io",
           },
         ],
       },

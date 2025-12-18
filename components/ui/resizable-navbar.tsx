@@ -281,7 +281,13 @@ export const NavbarLogo = () => {
       href="/"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-foreground"
     >
-      <Image src="/difuzed.png" alt="logo" width={36} height={36} priority />
+      <Image
+        src="/difuzed.png"
+        alt="Logo DiFuzed - Agence spécialisée en Generative Engine Optimization (GEO)"
+        width={36}
+        height={36}
+        priority
+      />
       <span className="font-medium text-foreground">DiFuzed</span>
     </Link>
   );

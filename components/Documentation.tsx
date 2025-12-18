@@ -101,10 +101,31 @@ export function Documentation() {
 }
 
 const DummyContent = ({ imageSrc }: { imageSrc: string }) => {
+  // Générer un alt descriptif basé sur le nom de l'image
+  const getAltText = (src: string) => {
+    if (src.includes("doc"))
+      return "Documentation technique optimisée pour les LLM et moteurs de recherche IA";
+    if (src.includes("docwhite"))
+      return "Documentation technique optimisée pour les LLM et moteurs de recherche IA";
+    if (src.includes("wiki"))
+      return "Présence sur Wikipedia et sources externes pour améliorer la visibilité GEO";
+    if (src.includes("linkedin"))
+      return "Optimisation de la présence LinkedIn Entreprise pour le Generative Engine Optimization";
+    if (src.includes("medium"))
+      return "Publication d'articles SEO et GEO sur Medium pour renforcer l'autorité";
+    if (src.includes("crunchbase"))
+      return "Profil Crunchbase optimisé pour la visibilité B2B et le référencement IA";
+    if (src.includes("reddit"))
+      return "Engagement communautaire sur Reddit pour améliorer la présence GEO";
+    if (src.includes("substack"))
+      return "Newsletter Substack pour développer l'autorité et la visibilité dans les LLM";
+    return "Plateforme stratégique pour améliorer votre Generative Engine Optimization (GEO)";
+  };
+
   return (
     <Image
       src={imageSrc}
-      alt="content image"
+      alt={getAltText(imageSrc)}
       width={1000}
       height={1000}
       className="object-cover object-left-top h-[60%] md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto"

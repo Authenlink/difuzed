@@ -94,7 +94,7 @@ const Hero = () => {
           src={
             mounted && resolvedTheme === "light" ? "/docwhite.png" : "/doc.png"
           }
-          alt="hero"
+          alt="Documentation technique optimisée pour Generative Engine Optimization (GEO) - DiFuzed"
           height={720}
           width={1400}
           className="mx-auto rounded-2xl object-cover h-full object-left-top draggable-false"

@@ -29,11 +29,13 @@ export const MacbookScroll = ({
   showGradient,
   title,
   badge,
+  alt,
 }: {
   src?: string;
   showGradient?: boolean;
   title?: string | React.ReactNode;
   badge?: React.ReactNode;
+  alt?: string;
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -89,6 +91,7 @@ export const MacbookScroll = ({
         scaleY={scaleY}
         rotate={rotate}
         translate={translate}
+        alt={alt}
       />
       {/* Base area */}
       <div className="relative -z-10 h-[22rem] w-[32rem] overflow-hidden rounded-2xl bg-gray-200 dark:bg-[#272729]">
@@ -124,12 +127,14 @@ export const Lid = ({
   rotate,
   translate,
   src,
+  alt,
 }: {
   scaleX: MotionValue<number>;
   scaleY: MotionValue<number>;
   rotate: MotionValue<number>;
   translate: MotionValue<number>;
   src?: string;
+  alt?: string;
 }) => {
   return (
     <div className="relative [perspective:800px]">
@@ -166,7 +171,10 @@ export const Lid = ({
         <div className="absolute inset-0 rounded-lg bg-[#272729]" />
         <img
           src={src as string}
-          alt="aceternity logo"
+          alt={
+            alt ||
+            "Présentation visuelle de la solution DiFuzed pour Generative Engine Optimization"
+          }
           className="absolute inset-0 h-full w-full rounded-lg object-cover object-left-top"
         />
       </motion.div>

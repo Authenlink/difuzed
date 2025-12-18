@@ -14,9 +14,36 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DiFuzed",
+  title: "DiFuzed - Agence GEO | Optimisation pour ChatGPT, Claude, Gemini",
   description:
-    "L'Agence GEO qui vous placera en tant que référence de votre secteur sur tous les moteurs de recherches IA ",
+    "Devenez LA référence citée par ChatGPT, Claude, Gemini et Perplexity. DiFuzed optimise votre présence sur les moteurs de recherche IA avec du Generative Engine Optimization (GEO).",
+  keywords: [
+    "GEO",
+    "Generative Engine Optimization",
+    "SEO IA",
+    "ChatGPT",
+    "Claude",
+    "Gemini",
+    "Perplexity",
+    "optimisation LLM",
+  ],
+  alternates: {
+    canonical: "https://difuzed.io",
+  },
+  openGraph: {
+    title: "DiFuzed - Agence GEO | Optimisation pour moteurs de recherche IA",
+    description:
+      "Devenez LA référence citée par ChatGPT, Claude, Gemini et Perplexity. Services d'optimisation pour moteurs de recherche IA.",
+    url: "https://difuzed.io",
+    siteName: "DiFuzed",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DiFuzed - Agence GEO",
+    description: "Devenez LA référence citée par les moteurs de recherche IA",
+  },
+  metadataBase: new URL("https://difuzed.io"),
 };
 
 export default function RootLayout({
@@ -30,8 +57,8 @@ export default function RootLayout({
     name: "DiFuzed",
     description:
       "L'Agence GEO qui vous placera en tant que référence de votre secteur sur tous les moteurs de recherches IA",
-    url: "https://difuzed.com",
-    logo: "https://difuzed.com/logo.png",
+    url: "https://difuzed.io",
+    logo: "https://difuzed.io/logo.png",
     sameAs: [],
     contactPoint: {
       "@type": "ContactPoint",
@@ -71,14 +98,14 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "DiFuzed",
-    url: "https://difuzed.com",
+    url: "https://difuzed.io",
     description:
       "L'Agence GEO qui vous placera en tant que référence de votre secteur sur tous les moteurs de recherches IA",
     potentialAction: {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: "https://difuzed.com/?q={search_term_string}",
+        urlTemplate: "https://difuzed.io/?q={search_term_string}",
       },
       "query-input": "required name=search_term_string",
     },
