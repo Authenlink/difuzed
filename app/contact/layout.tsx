@@ -11,13 +11,13 @@ export const metadata: Metadata = {
     "consultation Generative Engine Optimization",
   ],
   alternates: {
-    canonical: "https://difuzed.io/contact",
+    canonical: "https://www.difuzed.io/contact",
   },
   openGraph: {
     title: "Contact DiFuzed - Prendre rendez-vous pour votre stratégie GEO",
     description:
       "Prenez rendez-vous avec DiFuzed pour optimiser votre présence sur les moteurs de recherche IA. Audit gratuit disponible.",
-    url: "https://difuzed.io/contact",
+    url: "https://www.difuzed.io/contact",
     siteName: "DiFuzed",
     type: "website",
   },
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description:
       "Prenez rendez-vous pour votre stratégie Generative Engine Optimization",
   },
-  metadataBase: new URL("https://difuzed.io"),
+  metadataBase: new URL("https://www.difuzed.io"),
 };
 
 export default function ContactLayout({

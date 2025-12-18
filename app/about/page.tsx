@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "À propos de DiFuzed - Agence GEO spécialisée",
     description:
       "Découvrez DiFuzed, l'agence pionnière en Generative Engine Optimization (GEO). Notre mission : faire de votre entreprise la réponse par défaut des intelligences artificielles.",
-    url: "https://difuzed.io/about",
+    url: "https://www.difuzed.io/about",
     siteName: "DiFuzed",
     type: "website",
   },
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
       "Découvrez DiFuzed, l'agence pionnière en Generative Engine Optimization (GEO).",
   },
   alternates: {
-    canonical: "https://difuzed.io/about",
+    canonical: "https://www.difuzed.io/about",
   },
-  metadataBase: new URL("https://difuzed.io"),
+  metadataBase: new URL("https://www.difuzed.io"),
 };
 
 export default function AboutPage() {
@@ -33,12 +33,12 @@ export default function AboutPage() {
     name: "À propos de DiFuzed",
     description:
       "Découvrez DiFuzed, l'agence pionnière en Generative Engine Optimization (GEO). Notre mission : faire de votre entreprise la réponse par défaut des intelligences artificielles.",
-    url: "https://difuzed.io/about",
+    url: "https://www.difuzed.io/about",
     mainEntity: {
       "@type": "Organization",
       name: "DiFuzed",
-      url: "https://difuzed.io",
-      logo: "https://difuzed.io/logo.png",
+      url: "https://www.difuzed.io",
+      logo: "https://www.difuzed.io/logo.png",
       foundingDate: "2024",
       founder: {
         "@type": "Person",
@@ -60,13 +60,13 @@ export default function AboutPage() {
           "@type": "ListItem",
           position: 1,
           name: "Accueil",
-          item: "https://difuzed.io",
+          item: "https://www.difuzed.io",
         },
         {
           "@type": "ListItem",
           position: 2,
           name: "À propos",
-          item: "https://difuzed.io/about",
+          item: "https://www.difuzed.io/about",
         },
       ],
     },

@@ -28,13 +28,13 @@ export const metadata: Metadata = {
     "optimisation LLM",
   ],
   alternates: {
-    canonical: "https://difuzed.io",
+    canonical: "https://www.difuzed.io",
   },
   openGraph: {
     title: "DiFuzed - Agence GEO | Optimisation pour moteurs de recherche IA",
     description:
       "Devenez LA référence citée par ChatGPT, Claude, Gemini et Perplexity. Services d'optimisation pour moteurs de recherche IA.",
-    url: "https://difuzed.io",
+    url: "https://www.difuzed.io",
     siteName: "DiFuzed",
     type: "website",
   },
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: "DiFuzed - Agence GEO",
     description: "Devenez LA référence citée par les moteurs de recherche IA",
   },
-  metadataBase: new URL("https://difuzed.io"),
+  metadataBase: new URL("https://www.difuzed.io"),
 };
 
 export default function RootLayout({
@@ -57,8 +57,8 @@ export default function RootLayout({
     name: "DiFuzed",
     description:
       "L'Agence GEO qui vous placera en tant que référence de votre secteur sur tous les moteurs de recherches IA",
-    url: "https://difuzed.io",
-    logo: "https://difuzed.io/logo.png",
+    url: "https://www.difuzed.io",
+    logo: "https://www.difuzed.io/logo.png",
     sameAs: [],
     contactPoint: {
       "@type": "ContactPoint",
@@ -98,14 +98,14 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "DiFuzed",
-    url: "https://difuzed.io",
+    url: "https://www.difuzed.io",
     description:
       "L'Agence GEO qui vous placera en tant que référence de votre secteur sur tous les moteurs de recherches IA",
     potentialAction: {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: "https://difuzed.io/?q={search_term_string}",
+        urlTemplate: "https://www.difuzed.io/?q={search_term_string}",
       },
       "query-input": "required name=search_term_string",
     },

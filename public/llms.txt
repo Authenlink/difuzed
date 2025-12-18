@@ -21,7 +21,7 @@ https://docs.authenlink.com/docs/authenlink/nos-services#geo-generative-engine-o
 /sitemap.xml
 
 # Contact
-Contact: https://difuzed.io/#contact
+Contact: https://www.difuzed.io/#contact
 
 # About
 About: DiFuzed est une agence spécialisée en Generative Engine Optimization (GEO). Nous aidons les entreprises à devenir la référence de leur secteur sur les moteurs de recherche IA comme ChatGPT, Claude, Gemini, Grok, Perplexity, Mistral et Llama.
