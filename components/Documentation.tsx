@@ -16,6 +16,7 @@ export function Documentation() {
           <p>Construisez votre documentation pour nourrir les IA</p>
           <DummyContent
             imageSrc={theme === "dark" ? "/doc.png" : "/docwhite.png"}
+            alt="Documentation technique optimisée pour les LLM et moteurs de recherche IA - DiFuzed"
           />
         </div>
       ),
@@ -28,6 +29,7 @@ export function Documentation() {
           <p>Présence sur Wikipedia et sources externes</p>
           <DummyContent
             imageSrc={theme === "dark" ? "/wikidark.png" : "/wikiwhite.png"}
+            alt="Présence sur Wikipedia et sources externes pour améliorer la visibilité GEO - DiFuzed"
           />
         </div>
       ),
@@ -38,7 +40,10 @@ export function Documentation() {
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-[#0077B5] to-[#005885]">
           <p>Optimisez votre présence LinkedIn Entreprise</p>
-          <DummyContent imageSrc="/linkedin.png" />
+          <DummyContent
+            imageSrc="/linkedin.png"
+            alt="Optimisation de la présence LinkedIn Entreprise pour le Generative Engine Optimization - DiFuzed"
+          />
         </div>
       ),
     },
@@ -48,7 +53,10 @@ export function Documentation() {
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-slate-700 to-slate-900">
           <p>Publiez et partagez vos expertises sur Medium</p>
-          <DummyContent imageSrc="/medium.png" />
+          <DummyContent
+            imageSrc="/medium.png"
+            alt="Publication d'articles SEO et GEO sur Medium pour renforcer l'autorité - DiFuzed"
+          />
         </div>
       ),
     },
@@ -58,7 +66,10 @@ export function Documentation() {
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-pink-500 to-pink-700">
           <p>Présence sur Crunchbase pour la visibilité B2B</p>
-          <DummyContent imageSrc="/crunchbase.png" />
+          <DummyContent
+            imageSrc="/crunchbase.png"
+            alt="Profil Crunchbase optimisé pour la visibilité B2B et le référencement IA - DiFuzed"
+          />
         </div>
       ),
     },
@@ -70,6 +81,7 @@ export function Documentation() {
           <p>Communauté et discussions sur Reddit</p>
           <DummyContent
             imageSrc={theme === "dark" ? "/redditdark.png" : "/redditwhite.png"}
+            alt="Engagement communautaire sur Reddit pour améliorer la présence GEO - DiFuzed"
           />
         </div>
       ),
@@ -80,7 +92,10 @@ export function Documentation() {
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-orange-500 to-orange-700">
           <p>Créez et monétisez votre newsletter sur Substack</p>
-          <DummyContent imageSrc="/substack.png" />
+          <DummyContent
+            imageSrc="/substack.png"
+            alt="Newsletter Substack pour développer l'autorité et la visibilité dans les LLM - DiFuzed"
+          />
         </div>
       ),
     },
@@ -100,32 +115,11 @@ export function Documentation() {
   );
 }
 
-const DummyContent = ({ imageSrc }: { imageSrc: string }) => {
-  // Générer un alt descriptif basé sur le nom de l'image
-  const getAltText = (src: string) => {
-    if (src.includes("doc"))
-      return "Documentation technique optimisée pour les LLM et moteurs de recherche IA";
-    if (src.includes("docwhite"))
-      return "Documentation technique optimisée pour les LLM et moteurs de recherche IA";
-    if (src.includes("wiki"))
-      return "Présence sur Wikipedia et sources externes pour améliorer la visibilité GEO";
-    if (src.includes("linkedin"))
-      return "Optimisation de la présence LinkedIn Entreprise pour le Generative Engine Optimization";
-    if (src.includes("medium"))
-      return "Publication d'articles SEO et GEO sur Medium pour renforcer l'autorité";
-    if (src.includes("crunchbase"))
-      return "Profil Crunchbase optimisé pour la visibilité B2B et le référencement IA";
-    if (src.includes("reddit"))
-      return "Engagement communautaire sur Reddit pour améliorer la présence GEO";
-    if (src.includes("substack"))
-      return "Newsletter Substack pour développer l'autorité et la visibilité dans les LLM";
-    return "Plateforme stratégique pour améliorer votre Generative Engine Optimization (GEO)";
-  };
-
+const DummyContent = ({ imageSrc, alt }: { imageSrc: string; alt: string }) => {
   return (
     <Image
       src={imageSrc}
-      alt={getAltText(imageSrc)}
+      alt={alt}
       width={1000}
       height={1000}
       className="object-cover object-left-top h-[60%] md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto"
