@@ -82,9 +82,13 @@ export default function Home() {
               <NavItems items={navItems} />
               <div className="flex items-center gap-2">
                 <NavbarThemeToggle />
-                <Link href="/contact">
+                <Link
+                  href="https://app.difuzed.io"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <MagicButton
-                    title="Rendez-vous"
+                    title="Launch App"
                     icon={<IconCalendar size={20} />}
                     position="right"
                     className="md:w-auto h-10"
