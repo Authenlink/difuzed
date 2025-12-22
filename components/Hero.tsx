@@ -92,9 +92,11 @@ const Hero = () => {
       >
         <Image
           src={
-            mounted && resolvedTheme === "light" ? "/docwhite.png" : "/doc.png"
+            mounted && resolvedTheme === "light"
+              ? "/difuzedWhite.png"
+              : "/difuzedDark.png"
           }
-          alt="Documentation technique optimisée pour Generative Engine Optimization (GEO) - DiFuzed"
+          alt="Interface de l'application DiFuzed - Outil d'audit GEO automatisé pour l'optimisation des moteurs de recherche IA"
           height={720}
           width={1400}
           className="mx-auto rounded-2xl object-cover h-full object-left-top draggable-false"
