@@ -6,4 +6,8 @@ export const navItems = [
     name: "Docs",
     link: "https://docs.authenlink.com/docs/authenlink/nos-services#geo-generative-engine-optimization",
   },
+  {
+    name: "Blog",
+    link: "https://blog.difuzed.io"
+  }
 ];
