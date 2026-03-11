@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
   Navbar,
@@ -14,8 +13,6 @@ import {
   NavbarLogo,
   NavbarThemeToggle,
 } from "@/components/ui/resizable-navbar";
-import MagicButton from "@/components/ui/MagicButton";
-import { IconCalendar } from "@tabler/icons-react";
 import { navItems } from "@/data/navbar";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 import About from "@/components/about/About";
@@ -41,19 +38,6 @@ export function AboutPageContent() {
             <NavItems items={navItems} />
             <div className="flex items-center gap-2">
               <NavbarThemeToggle />
-              <Link
-                href="https://app.difuzed.io"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <MagicButton
-                  title="Launch App"
-                  icon={<IconCalendar size={20} />}
-                  position="right"
-                  className="md:w-auto h-10"
-                  otherClasses="!px-4 !text-sm !font-bold"
-                />
-              </Link>
             </div>
           </NavBody>
           <MobileNav>
