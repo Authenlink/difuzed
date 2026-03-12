@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import {
   IconMail,
   IconPhone,
@@ -18,9 +19,52 @@ import {
 } from "@/components/ui/card";
 import MagicButtonTwo from "@/components/ui/MagicButtonTwo";
 import { useRouter } from "next/navigation";
+import { toast } from "sonner";
+
+const N8N_WEBHOOK_URL =
+  "https://primary-production-e46f.up.railway.app/webhook/474d5be5-3cc8-4d78-b416-e0b8943c59f4";
 
 const Contact = () => {
   const router = useRouter();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const data = {
+      lastName: formData.get("lastName") as string,
+      firstName: formData.get("firstName") as string,
+      company: formData.get("company") as string,
+      email: formData.get("email") as string,
+      message: formData.get("message") as string,
+    };
+
+    setIsSubmitting(true);
+    try {
+      const response = await fetch(N8N_WEBHOOK_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error("Erreur lors de l'envoi");
+      }
+
+      toast.success("Message envoyé ! Nous vous recontacterons rapidement.");
+      form.reset();
+    } catch {
+      toast.error(
+        "Une erreur est survenue. Veuillez réessayer ou nous contacter par email."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section id="contact" className="py-20 px-6 md:px-12 lg:px-24">
@@ -39,22 +83,26 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left Side - Form */}
           <div className="order-2 lg:order-1">
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="lastName">Nom</Label>
                   <Input
                     id="lastName"
+                    name="lastName"
                     placeholder="Votre nom"
                     className="h-12 bg-card dark:bg-card"
+                    required
                   />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="firstName">Prénom</Label>
                   <Input
                     id="firstName"
+                    name="firstName"
                     placeholder="Votre prénom"
                     className="h-12 bg-card dark:bg-card"
+                    required
                   />
                 </div>
               </div>
@@ -63,6 +111,7 @@ const Contact = () => {
                 <Label htmlFor="company">Entreprise</Label>
                 <Input
                   id="company"
+                  name="company"
                   placeholder="Nom de votre entreprise"
                   className="h-12 bg-card dark:bg-card"
                 />
@@ -72,9 +121,11 @@ const Contact = () => {
                 <Label htmlFor="email">Adresse email</Label>
                 <Input
                   id="email"
+                  name="email"
                   type="email"
                   placeholder="vous@exemple.com"
                   className="h-12 bg-card dark:bg-card"
+                  required
                 />
               </div>
 
@@ -84,16 +135,20 @@ const Contact = () => {
                 </Label>
                 <Textarea
                   id="message"
+                  name="message"
                   placeholder="Décrivez votre projet ou posez-nous vos questions..."
                   className="min-h-36 resize-none bg-card dark:bg-card"
+                  required
                 />
               </div>
 
               <MagicButtonTwo
-                title="Envoyer"
+                title={isSubmitting ? "Envoi en cours..." : "Envoyer"}
                 icon={<IconSend className="w-4 h-4" />}
                 position="right"
                 otherClasses="w-full"
+                disabled={isSubmitting}
+                type="submit"
               />
             </form>
           </div>
